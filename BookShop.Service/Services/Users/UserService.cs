@@ -1,14 +1,15 @@
 ﻿using BookShop.Domain.Dto_s.UserDto_s;
 using BookShop.Domain.Entities.Users;
-using BookShop.Domain.Interfaces;
 using BookShop.Domain.Interfaces.GenericRepositories;
+using BookShop.Domain.Interfaces.Users;
 using BookShop.Domain.Models.UserModels;
+using BookShop.Infrastucture;
 using BookShop.Service.Exceptions;
 using System.Linq.Expressions;
 
 namespace BookShop.Service.Services.Users;
 
-public class UserService : IUserService
+internal sealed class UserService : IUserService
 {
     private readonly IGenericRepository<User> _userRepository;
 
@@ -27,7 +28,7 @@ public class UserService : IUserService
         {
             UserName = user.UserName,
             Email = user.Email,
-            Password = user.Password,
+            Password = user.Password.Encrypt(),
             CreatedDate = DateTime.UtcNow,
         };
 

@@ -3,7 +3,7 @@ using BookShop.Domain.Entities.Users;
 using BookShop.Domain.Models.UserModels;
 using System.Linq.Expressions;
 
-namespace BookShop.Domain.Interfaces;
+namespace BookShop.Domain.Interfaces.Users;
 
 public interface IUserService
 {

@@ -4,10 +4,12 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace BookShop.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class UserConfigurationsAndEntities : Migration
+    public partial class UserAndBooksModels : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -45,6 +47,15 @@ namespace BookShop.Api.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "CreatedDate", "Email", "Password", "UpdatedDate", "UserName" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(2024, 2, 29, 4, 26, 54, 461, DateTimeKind.Utc), "admin@gmail.com", "web123$", new DateTime(2024, 2, 29, 4, 26, 54, 461, DateTimeKind.Utc), "Asror" },
+                    { 2, new DateTime(2024, 2, 29, 4, 26, 54, 461, DateTimeKind.Utc), "technicalAdmin@gmail.com", "Aa@123456", new DateTime(2024, 2, 29, 4, 26, 54, 461, DateTimeKind.Utc), "MuhammadYusuf" }
                 });
         }
 

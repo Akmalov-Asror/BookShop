@@ -1,5 +1,5 @@
 ﻿using BookShop.Domain.Dto_s.UserDto_s;
-using BookShop.Domain.Interfaces;
+using BookShop.Domain.Interfaces.Users;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookShop.Api.Controllers;

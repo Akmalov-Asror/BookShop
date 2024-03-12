@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BookShop.Api.Migrations
 {
     [DbContext(typeof(BookShopDbContext))]
-    [Migration("20240229045247_UserConfigurationsAndEntities2")]
-    partial class UserConfigurationsAndEntities2
+    [Migration("20240312095847_UserAndBooksModels")]
+    partial class UserAndBooksModels
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -87,19 +87,19 @@ namespace BookShop.Api.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2024, 2, 29, 4, 26, 54, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2024, 2, 29, 4, 26, 54, 461, DateTimeKind.Utc),
                             Email = "admin@gmail.com",
                             Password = "web123$",
-                            UpdatedDate = new DateTime(2024, 2, 29, 4, 26, 54, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2024, 2, 29, 4, 26, 54, 461, DateTimeKind.Utc),
                             UserName = "Asror"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2024, 2, 29, 4, 26, 54, 0, DateTimeKind.Unspecified),
+                            CreatedDate = new DateTime(2024, 2, 29, 4, 26, 54, 461, DateTimeKind.Utc),
                             Email = "technicalAdmin@gmail.com",
                             Password = "Aa@123456",
-                            UpdatedDate = new DateTime(2024, 2, 29, 4, 26, 54, 0, DateTimeKind.Unspecified),
+                            UpdatedDate = new DateTime(2024, 2, 29, 4, 26, 54, 461, DateTimeKind.Utc),
                             UserName = "MuhammadYusuf"
                         });
                 });
